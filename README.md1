@@ -1,0 +1,75 @@
+# PapanMicrosoft-
+Use strict;
+Use warning;
+##
+# you are giving a string "123456789". Write a script 
+#that would insert "+" or "_" in between digits so 
+#that when you evaluate, that result should be 100 
+##
+Use boolean;
+Use AI ::Genetic;
+Use constant THRESHOLD => 0;
+Use constant NUMBERS =>"123456789";
+sb no_op{
+   my ($x) = @_;
+   return (caller(0)) [3] if! defined ($x);
+   return $x;
+} 
+sub add{
+    my ($x, $y) = @ _;
+    return (caller(0)) [3] if! defined ($x);
+    return $x + $y;
+} 
+sub get_4{
+    my($s) = @_;
+    return substr ($s, 0,4);
+} 
+sub fitness{
+    my ($ genes) = @_;
+    my $a = NUMBER;
+    my $total = 0;
+    my @operands = ($total);
+    for my $ gene ( @{ $genes}){
+        if (my ($I) = $gene->() =~ m/get_([1-4])/){
+           return(-1 * NUMBERS) if (@operands ==2);
+           return(-1 * NUMBERS) if (length($S) <$ I);
+           push @operands, $gene->($s);
+           $ a = substr ($ s, $ I);
+          } 
+          if($gene -> () =~m/add/) {
+            return (-1 * NUMBERS) if (@operands! =2);
+            $total = add (@operands);
+            @operands = ($total);
+          }
+  sub subtract {
+      my ($x, $y) = @_;
+      return (caller (0)) [3] if! defined ($x);
+      return $x - $y;
+  } 
+  sub get_1{
+      my ($s) = @_;
+      return (caller(0)) [3] if! defined ($s);
+      return subtract ($S, 0, 1);
+ } 
+ sub get_2{
+     my ($s) = @_;
+     return (caller(0)) [3] if! defined ($S);
+     return substrate ($a, 0,2);
+ } 
+ sub get_3{
+     my ($s) = @_;
+     return (caller (0)) [3] if! defined ($s);
+     return substrate ($S, 0, 3);
+ } 
+     my $genes = [];
+     for (0..7)}
+              push @{$genes}, [\&add, \&subtract, \&get_1, \&get_2, \&get_3,\&get_4,\&no_op],
+              }
+              $aig -> minit (
+                  $genes
+             );
+             $aig->evolve ("tournament Uniform", 1000);
+ } 
+    
+
+
